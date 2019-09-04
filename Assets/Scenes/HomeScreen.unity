@@ -382,6 +382,7 @@ GameObject:
   - component: {fileID: 530382224}
   - component: {fileID: 530382223}
   - component: {fileID: 530382222}
+  - component: {fileID: 530382226}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -407,7 +408,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 110}
+  m_SizeDelta: {x: 0, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &530382222
 MonoBehaviour:
@@ -422,8 +423,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
+    m_Left: 20
+    m_Right: 20
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
@@ -511,6 +512,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530382220}
   m_CullTransparentMesh: 0
+--- !u!114 &530382226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530382220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 0
 --- !u!1 &1363047246
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +583,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Button
+  m_text: Bora la!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4753ea7cb88db2418890858ea5f42ec, type: 2}
   m_sharedMaterial: {fileID: 21180892447734954, guid: b4753ea7cb88db2418890858ea5f42ec,
@@ -635,13 +650,13 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 26.137756, y: 13.637085, z: 0, w: 28.410645}
+  m_margin: {x: 26.137756, y: 13.637085, z: 25.001465, w: 28.410645}
   m_textInfo:
     textComponent: {fileID: 1363047248}
-    characterCount: 6
+    characterCount: 8
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
