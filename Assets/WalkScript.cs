@@ -8,6 +8,8 @@ public class WalkScript : MonoBehaviour
 	private float runSpeed = 0.3f;
 	private float charSpeed;
 
+	private bool isOnGround = false;
+
 	void Start()
 	{
 		charSpeed = walkSpeed;
@@ -37,18 +39,29 @@ public class WalkScript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
         	charSpeed = runSpeed;
-        	GetComponent<Animator>().SetBool("Run", true);
+        	GetComponent<Animator>().SetBool("run", true);
         }
 
         if(Input.GetKeyUp(KeyCode.LeftShift))
         {
         	charSpeed = walkSpeed;
-        	GetComponent<Animator>().SetBool("Run", false);
+        	GetComponent<Animator>().SetBool("run", false);
         }
 
-        if(Input.GetKeyUp(KeyCode.Space))
+        if(Input.GetKeyUp(KeyCode.Space) && isOnGround)
         {
         	GetComponent<Rigidbody2D>().AddForce(new Vector2(0f,300f));
+        	GetComponent<Animator>().SetBool("onground", false);
+        	isOnGround = false;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.collider.tag == "floor")
+        {
+        	isOnGround= true;
+        	GetComponent<Animator>().SetBool("onground", true);
         }
     }
 }
